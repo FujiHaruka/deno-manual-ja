@@ -1,1 +1,8 @@
 remote_theme: rundocs/jekyll-rtd-theme
+
+title: Deno マニュアル
+lang: ja
+description: Deno Manual の翻訳です
+
+plugins:
+  - jekyll-titles-from-headings
