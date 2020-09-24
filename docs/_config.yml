@@ -4,5 +4,5 @@ title: Deno マニュアル
 lang: ja
 description: Deno Manual の翻訳です
 
-plugins:
-  - jekyll-titles-from-headings
+readme_index:
+  with_frontmatter: true
