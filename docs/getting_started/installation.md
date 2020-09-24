@@ -1,3 +1,7 @@
+---
+title: インストール
+sort: 1
+---
 <!-- L1..1
 ## Installation
 -->
