@@ -1,6 +1,6 @@
 ---
 title: 環境のセットアップ
-sort: 2
+sort: 20
 ---
 <!-- L1..1
 ## Set up your environment
@@ -100,7 +100,7 @@ source /usr/local/etc/bash_completion.d/deno.bash
 Example (zsh without framework):
 -->
 
-例 (zsh without framework):
+例 (フレームワークなしの zsh):
 
 <!-- L41..44
 ```shell
@@ -118,7 +118,7 @@ deno completions zsh > ~/.zsh/_deno
 then add this to your `.zshrc`
 -->
 
-それから以下を `.zshrc` に追記してください。
+次に以下を `.zshrc` に追記してください。
 
 <!-- L48..52
 ```shell
@@ -166,15 +166,14 @@ After this add deno plugin under plugins tag in `~/.zshrc` file. for tools like
 command will be `antigen bundle deno` and so on.
 -->
 
-After this add deno plugin under plugins tag in `~/.zshrc` file. for tools like
-`antigen` path will be `~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins` and
-command will be `antigen bundle deno` and so on.
+この後、`~/.zshrc` ファイルのプラグインタグに deno プラグインを加えてください。`antigen` のようなツールなら、パスは `~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins`
+でコマンドは `antigen bundle deno` のようになります。
 
 <!-- L69..69
 Example (Powershell):
 -->
 
-Example (Powershell):
+例 (Powershell):
 
 <!-- L71..74
 ```shel
@@ -194,15 +193,14 @@ This will be create a Powershell profile at
 and it will be run whenever you launch the PowerShell.
 -->
 
-This will be create a Powershell profile at
-`$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` by default,
-and it will be run whenever you launch the PowerShell.
+これで Powershell profile がデフォルトで `$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` に作成され、
+PowerShell を起動するたびに実行されます。
 
 <!-- L80..80
 ### Editors and IDEs
 -->
 
-### Editors and IDEs
+### エディタと IDE
 
 <!-- L82..85
 Because Deno requires the use of file extensions for module imports and allows
@@ -211,16 +209,15 @@ at the moment, many editors will throw errors about being unable to find files
 or imports having unnecessary file extensions.
 -->
 
-Because Deno requires the use of file extensions for module imports and allows
-http imports, and most editors and language servers do not natively support this
-at the moment, many editors will throw errors about being unable to find files
-or imports having unnecessary file extensions.
+Deno ではモジュールのインポートにファイル拡張子を付ける必要があり、それに加えて HTTP インポートが許可されていますが、
+ほとんどのエディタと言語サーバーは今のところそれを組み込みでサポートしていません。
+そのため、多くのエディタではファイルを見つけられないとかファイル拡張が不要であるといったエラーが出ます。
 
 <!-- L87..87
 The community has developed extensions for some editors to solve these issues:
 -->
 
-The community has developed extensions for some editors to solve these issues:
+いくつかのエディタに関してはこの問題を解決するためコミュニティが拡張機能を開発しています。
 
 <!-- L89..89
 #### VS Code

@@ -1,5 +1,6 @@
 ---
 title: 入門
+sort: 20
 ---
 <!-- L1..1
 # Getting Started

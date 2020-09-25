@@ -1,6 +1,6 @@
 ---
 title: 初めに
-sort: 1
+sort: 10
 ---
 <!-- L1..1
 # Introduction
