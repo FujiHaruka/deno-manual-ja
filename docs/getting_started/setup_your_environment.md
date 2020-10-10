@@ -232,24 +232,24 @@ published on the
 Please report any issues.
 -->
 
-The beta version of [vscode_deno](https://github.com/denoland/vscode_deno) is
-published on the
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
-Please report any issues.
+[vscode_deno](https://github.com/denoland/vscode_deno) のベータ版が
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)
+で公開されています。問題があれば報告してください。
 
 <!-- L96..96
 #### JetBrains IDEs
 -->
 
-#### JetBrains IDEs
+#### JetBrains IDE
 
 <!-- L98..99
 Support for JetBrains IDEs is available through
 [the Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno).
 -->
 
-Support for JetBrains IDEs is available through
-[the Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno).
+JetBrains IDE のサポートは
+[the Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno)
+を通じて利用可能です。
 
 <!-- L101..103
 For more information on how to set-up your JetBrains IDE for Deno, read
@@ -257,15 +257,15 @@ For more information on how to set-up your JetBrains IDE for Deno, read
 on YouTrack.
 -->
 
-For more information on how to set-up your JetBrains IDE for Deno, read
-[this comment](https://youtrack.jetbrains.com/issue/WEB-41607#focus=streamItem-27-4160152.0-0)
-on YouTrack.
+JetBrains IDE で Deno のセットアップを行う方法に関して、詳細な情報は YouTrack の
+[このコメント](https://youtrack.jetbrains.com/issue/WEB-41607#focus=streamItem-27-4160152.0-0)
+をお読みください。
 
 <!-- L105..105
 #### Vim and NeoVim
 -->
 
-#### Vim and NeoVim
+#### Vim と NeoVim
 
 <!-- L107..109
 Vim works fairly well for Deno/TypeScript if you install
