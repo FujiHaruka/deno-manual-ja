@@ -30,7 +30,7 @@ In this chapter we'll discuss:
 - [環境のセットアップ](./getting_started/setup_your_environment.md)
 - [`Hello World` スクリプトの実行](./getting_started/first_steps.md)
 <!-- - [Writing our own script](./getting_started/first_steps.md) -->
-<!-- - [Command line interface](./getting_started/command_line_interface.md) -->
+- [コマンドラインインターフェイス](./getting_started/command_line_interface.md)
 <!-- - [Understanding permissions](./getting_started/permissions.md) -->
 <!-- - [Using Deno with TypeScript](./getting_started/typescript.md) -->
 <!-- - [Using WebAssembly](./getting_started/webassembly.md) -->
