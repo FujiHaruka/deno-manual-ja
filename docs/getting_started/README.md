@@ -26,12 +26,11 @@ In this chapter we'll discuss:
 - [Debugging your code](./getting_started/debugging_your_code.md)
 -->
 
-- [Deno のインストール](./getting_started/installation.md)
-- [環境のセットアップ](./getting_started/setup_your_environment.md)
-- [`Hello World` スクリプトの実行](./getting_started/first_steps.md)
-<!-- - [Writing our own script](./getting_started/first_steps.md) -->
-- [コマンドラインインターフェイス](./getting_started/command_line_interface.md)
-<!-- - [Understanding permissions](./getting_started/permissions.md) -->
+- [Deno のインストール](./installation.md)
+- [環境のセットアップ](./setup_your_environment.md)
+- [`Hello World` スクリプトの実行](./first_steps.md)
+- [コマンドラインインターフェイス](./command_line_interface.md)
+- [パーミッションを理解する](./permissions.md)
 <!-- - [Using Deno with TypeScript](./getting_started/typescript.md) -->
 <!-- - [Using WebAssembly](./getting_started/webassembly.md) -->
 <!-- - [Debugging your code](./getting_started/debugging_your_code.md) -->
