@@ -1,6 +1,6 @@
 ---
 title: 環境のセットアップ
-sort: 20
+sort: 2
 ---
 <!-- L1..1
 ## Set up your environment

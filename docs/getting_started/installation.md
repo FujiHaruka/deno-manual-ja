@@ -1,6 +1,6 @@
 ---
 title: インストール
-sort: 10
+sort: 1
 ---
 <!-- L1..1
 ## Installation

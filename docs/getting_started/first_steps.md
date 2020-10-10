@@ -1,6 +1,6 @@
 ---
 title: 初めの一歩
-sort: 30
+sort: 3
 ---
 <!-- L1..1
 ## First steps

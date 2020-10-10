@@ -1,6 +1,6 @@
 ---
 title: コマンドラインインターフェイス
-sort: 40
+sort: 4
 ---
 <!-- L1..1
 ## Command line interface
