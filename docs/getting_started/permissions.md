@@ -6,7 +6,7 @@ sort: 5
 ## Permissions
 -->
 
-## Permissions
+## パーミッション
 
 <!-- L3..6
 Deno is secure by default. Therefore, unless you specifically enable it, a deno
@@ -15,10 +15,7 @@ security-sensitive areas or functions requires the use of permissions to be
 granted to a deno process on the command line.
 -->
 
-Deno is secure by default. Therefore, unless you specifically enable it, a deno
-module has no file, network, or environment access for example. Access to
-security-sensitive areas or functions requires the use of permissions to be
-granted to a deno process on the command line.
+Deno はデフォルトで安全です。そのため、明示的に許可しない限り Deno モジュールはたとえばファイル、ネットワーク、環境変数にアクセスできません。セキュリティ上重要な領域や機能にアクセスするにはコマンドラインで Deno プロセスに権限を与えるパーミッションを使う必要があります。
 
 <!-- L8..10
 For the following example, `mod.ts` has been granted read-only access to the
@@ -26,9 +23,7 @@ file system. It cannot write to it, or perform any other security-sensitive
 functions.
 -->
 
-For the following example, `mod.ts` has been granted read-only access to the
-file system. It cannot write to it, or perform any other security-sensitive
-functions.
+次の例では、`mod.ts` がファイルシステムに読み取り専用のアクセス権限を持ちます。書き込みはできませんし、他のセキュリティ上重要な機能は実行できません。
 
 <!-- L12..14
 ```shell
@@ -44,13 +39,13 @@ deno run --allow-read mod.ts
 ### Permissions list
 -->
 
-### Permissions list
+### パーミッション一覧
 
 <!-- L18..18
 The following permissions are available:
 -->
 
-The following permissions are available:
+以下のパーミッションが利用できます。
 
 <!-- L20..38
 - **-A, --allow-all** Allow all permissions. This disables all security.
@@ -74,16 +69,11 @@ The following permissions are available:
   allow-list of allowed file system access.
 -->
 
-- **-A, --allow-all** Allow all permissions. This disables all security.
-- **--allow-env** Allow environment access for things like getting and setting
-  of environment variables.
-- **--allow-hrtime** Allow high-resolution time measurement. High-resolution
-  time can be used in timing attacks and fingerprinting.
-- **--allow-net=\<allow-net\>** Allow network access. You can specify an
-  optional, comma-separated list of domains to provide an allow-list of allowed
-  domains.
-- **--allow-plugin** Allow loading plugins. Please note that --allow-plugin is
-  an unstable feature.
+- **-A, --allow-all** すべてのパーミッションを許可します。セキュリティをすべて解除します
+- **--allow-env** 環境変数の取得や上書きなど、環境へのアクセスを許可します
+- **--allow-hrtime** 高分解能の時間計測を許可します。高分解能の時間はタイミングアタックやフィンガープリンティングに使うことができます
+- **--allow-net=\<allow-net\>** ネットワークアクセスを許可します。オプションで、許可するドメインのリストを与えるためにコンマ区切りのドメインリストを指定することができます
+- **--allow-plugin** プラグインのロードを許可します。--allow-plugin は不安定な機能なので注意してください
 - **--allow-read=\<allow-read\>** Allow file system read access. You can specify
   an optional, comma-separated list of directories or files to provide a
   allow-list of allowed file system access.
