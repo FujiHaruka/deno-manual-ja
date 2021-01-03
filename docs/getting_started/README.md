@@ -32,5 +32,5 @@ In this chapter we'll discuss:
 - [コマンドラインインターフェイス](./command_line_interface.md)
 - [パーミッションを理解する](./permissions.md)
 - [Deno で TypeScript を使う](./getting_started/typescript.md)
-<!-- - [Using WebAssembly](./getting_started/webassembly.md) -->
+- [WebAssembly を使う](./getting_started/webassembly.md)
 <!-- - [Debugging your code](./getting_started/debugging_your_code.md) -->
