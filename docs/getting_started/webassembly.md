@@ -1,6 +1,6 @@
 ---
 title: WebAssembly のサポート
-sort: 70
+sort: 7
 ---
 <!-- L1..1
 ## WebAssembly support

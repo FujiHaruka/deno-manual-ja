@@ -33,4 +33,4 @@ In this chapter we'll discuss:
 - [パーミッションを理解する](./permissions.md)
 - [Deno で TypeScript を使う](./getting_started/typescript.md)
 - [WebAssembly を使う](./getting_started/webassembly.md)
-<!-- - [Debugging your code](./getting_started/debugging_your_code.md) -->
+- [コードをデバッグする](./getting_started/debugging_your_code.md)
