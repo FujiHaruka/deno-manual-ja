@@ -31,6 +31,6 @@ In this chapter we'll discuss:
 - [`Hello World` スクリプトの実行](./first_steps.md)
 - [コマンドラインインターフェイス](./command_line_interface.md)
 - [パーミッションを理解する](./permissions.md)
-<!-- - [Using Deno with TypeScript](./getting_started/typescript.md) -->
+- [Deno で TypeScript を使う](./getting_started/typescript.md)
 <!-- - [Using WebAssembly](./getting_started/webassembly.md) -->
 <!-- - [Debugging your code](./getting_started/debugging_your_code.md) -->
