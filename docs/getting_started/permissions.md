@@ -74,29 +74,23 @@ The following permissions are available:
 - **--allow-hrtime** 高分解能の時間計測を許可します。高分解能の時間はタイミングアタックやフィンガープリンティングに使うことができます
 - **--allow-net=\<allow-net\>** ネットワークアクセスを許可します。オプションで、許可するドメインのリストを与えるためにコンマ区切りのドメインリストを指定することができます
 - **--allow-plugin** プラグインのロードを許可します。--allow-plugin は不安定な機能なので注意してください
-- **--allow-read=\<allow-read\>** Allow file system read access. You can specify
-  an optional, comma-separated list of directories or files to provide a
-  allow-list of allowed file system access.
-- **--allow-run** Allow running subprocesses. Be aware that subprocesses are not
-  run in a sandbox and therefore do not have the same security restrictions as
-  the deno process. Therefore, use with caution.
-- **--allow-write=\<allow-write\>** Allow file system write access. You can
-  specify an optional, comma-separated list of directories or files to provide a
-  allow-list of allowed file system access.
+- **--allow-read=\<allow-read\>** ファイルシステムの読み取りアクセスを許可します。
+  オプションとして、コンマ区切りのディレクトリやファイル名のリストをファイルシステムへのアクセス許可リストとして指定できます
+- **--allow-run** サブプロセスの実行を許可します。サブプロセスの実行はサンドボックス内で行われないため deno のプロセスと同じセキュリティ制約を受けません。そのため、使用時に警告が表示されます
+- **--allow-write=\<allow-write\>** ファイルシステムの書き込みアクセスを許可します。オプションとして、コンマ区切りのディレクトリやファイル名のリストをファイルシステムへのアクセス許可リストとして指定できます
 
 <!-- L40..40
 ### Permissions allow-list
 -->
 
-### Permissions allow-list
+### 許可リストのパーミッション
 
 <!-- L42..43
 Deno also allows you to control the granularity of some permissions with
 allow-lists.
 -->
 
-Deno also allows you to control the granularity of some permissions with
-allow-lists.
+Deno ではいくつかのパーミッションに関して許可リストを使ってパーミッションの粒度を制御できます。
 
 <!-- L45..47
 This example restricts file system access by allow-listing only the `/usr`
@@ -104,9 +98,8 @@ directory, however the execution fails as the process was attempting to access a
 file in the `/etc` directory:
 -->
 
-This example restricts file system access by allow-listing only the `/usr`
-directory, however the execution fails as the process was attempting to access a
-file in the `/etc` directory:
+以下の例ではファイルシステムへのアクセスを制限するために `/usr` ディレクトリのみを許可リストに追加していますが、
+プロセスが `/etc` ディレクトリのファイルにアクセスしようとして実行時に失敗しています。
 
 <!-- L49..55
 ```shell
@@ -130,7 +123,7 @@ error: Uncaught PermissionDenied: read access to "/etc/passwd", run again with t
 Try it out again with the correct permissions by allow-listing `/etc` instead:
 -->
 
-Try it out again with the correct permissions by allow-listing `/etc` instead:
+今度は許可リストに `/etc` を追加して正しいパーミッションで実行し直してみます。
 
 <!-- L59..61
 ```shell
@@ -146,13 +139,13 @@ deno run --allow-read=/etc https://deno.land/std@$STD_VERSION/examples/cat.ts /e
 `--allow-write` works the same as `--allow-read`.
 -->
 
-`--allow-write` works the same as `--allow-read`.
+`--allow-write` の動作は `--allow-read` と同様です。
 
 <!-- L65..65
 ### Network access:
 -->
 
-### Network access:
+### ネットワークアクセス
 
 <!-- L67..67
 _fetch.ts_:
@@ -174,7 +167,7 @@ const result = await fetch("https://deno.land/");
 This is an example of how to allow-list hosts/urls:
 -->
 
-This is an example of how to allow-list hosts/urls:
+以下はホストや URL を許可リストに指定する例です。
 
 <!-- L75..77
 ```shell
@@ -193,12 +186,13 @@ process will fail.
 
 If `fetch.ts` tries to establish network connections to any other domain, the
 process will fail.
+`fetch.ts` が他のドメインにネットワーク接続を試みるとプロセスは失敗します。
 
 <!-- L82..82
 Allow net calls to any host/url:
 -->
 
-Allow net calls to any host/url:
+任意のホストや URL とのネットワーク接続を許可することもできます。
 
 <!-- L84..86
 ```shell
