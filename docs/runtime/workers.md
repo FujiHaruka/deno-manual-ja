@@ -1,32 +1,37 @@
+---
+title: Worker
+sort: 6
+---
 <!-- L1..1
 ## Workers
 -->
 
-## Workers
+## Worker
 
 <!-- L3..4
 Deno supports
 [`Web Worker API`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker).
 -->
 
-Deno supports
-[`Web Worker API`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker).
+Deno は
+[`Web Worker API`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker)
+をサポートしています。
 
 <!-- L6..7
 Workers can be used to run code on multiple threads. Each instance of `Worker`
 is run on a separate thread, dedicated only to that worker.
 -->
 
-Workers can be used to run code on multiple threads. Each instance of `Worker`
-is run on a separate thread, dedicated only to that worker.
+Worker はマルチスレッドでコードを実行するために使用します。
+`Worker` の各インスタンスは別々のスレッドで実行され、各スレッドは一つの worker に専念します。
 
 <!-- L9..10
 Currently Deno supports only `module` type workers; thus it's essential to pass
 the `type: "module"` option when creating a new worker.
 -->
 
-Currently Deno supports only `module` type workers; thus it's essential to pass
-the `type: "module"` option when creating a new worker.
+現時点では、Deno は `module` 型の worker のみをサポートしています。
+そのため新しい worker を作成するときに `type: "module"` オプションを渡すことが必須です。
 
 <!-- L12..15
 Relative module specifiers are
@@ -35,10 +40,8 @@ can instead use the `URL` contructor and `import.meta.url` to easily create a
 specifier for some nearby script.
 -->
 
-Relative module specifiers are
-[not supported](https://github.com/denoland/deno/issues/5216) at the moment. You
-can instead use the `URL` contructor and `import.meta.url` to easily create a
-specifier for some nearby script.
+相対パスによるモジュールの指定子は現時点で[サポートされていません](https://github.com/denoland/deno/issues/5216)。
+かわりに、近くのスクリプトの指定子を簡単に作成するには `URL` コンストラクタと `import.meta.url` を使うことができます。
 
 <!-- L17..25
 ```ts
