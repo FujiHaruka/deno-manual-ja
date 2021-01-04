@@ -44,8 +44,6 @@ On the CLI, read permission for `/foo/bar` is represented as
 `--allow-read=/foo/bar`. In runtime JS, it is represented as the following:
 -->
 
-On the CLI, read permission for `/foo/bar` is represented as
-`--allow-read=/foo/bar`. In runtime JS, it is represented as the following:
 `/foo/bar` に対する読み取りのパーミッションは、CLI において  `--allow-read=/foo/bar` と表されます。
 JS ランタイムにおいてこれは以下のように表されます。
 

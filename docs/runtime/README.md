@@ -1,6 +1,6 @@
 ---
 title: ランタイム
-sort: 10
+sort: 30
 ---
 <!-- L1..1
 # Runtime

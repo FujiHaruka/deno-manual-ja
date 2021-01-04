@@ -1,15 +1,19 @@
+---
+title: コンパイラ API
+sort: 4
+---
 <!-- L1..1
 ## Compiler APIs
 -->
 
-## Compiler APIs
+## コンパイラ API
 
 <!-- L3..4
 > This API is unstable. Learn more about
 > [unstable features](../runtime/stability.md).
 -->
 
-> This API is unstable. Learn more about
+> この API は unstable です。詳細は以下。
 > [unstable features](../runtime/stability.md).
 
 <!-- L6..7
@@ -17,8 +21,8 @@ Deno supports runtime access to the built-in TypeScript compiler. There are
 three methods in the `Deno` namespace that provide this access.
 -->
 
-Deno supports runtime access to the built-in TypeScript compiler. There are
-three methods in the `Deno` namespace that provide this access.
+Deno は組み込みの TypeScript コンパイラにアクセスするランタイムをサポートしています。
+`Deno` 名前空間にはこのアクセスを提供する３つのメソッドがあります。
 
 <!-- L9..9
 ### `Deno.compile()`
@@ -44,21 +48,15 @@ local or remote. The `options` argument is a set of options of type
 containing the ones supported by Deno.
 -->
 
-This works similar to `deno cache` in that it can fetch and cache the code,
-compile it, but not run it. It takes up to three arguments, the `rootName`,
-optionally `sources`, and optionally `options`. The `rootName` is the root
-module which will be used to generate the resulting program. This is like the
-module name you would pass on the command line in
-`deno run --reload example.ts`. The `sources` is a hash where the key is the
-fully qualified module name, and the value is the text source of the module. If
-`sources` is passed, Deno will resolve all the modules from within that hash and
-not attempt to resolve them outside of Deno. If `sources` are not provided, Deno
-will resolve modules as if the root module had been passed on the command line.
-Deno will also cache any of these resources. All resolved resources are treated
-as dynamic imports and require read or net permissions depending on if they're
-local or remote. The `options` argument is a set of options of type
-`Deno.CompilerOptions`, which is a subset of the TypeScript compiler options
-containing the ones supported by Deno.
+これは `deno cache` と似て、コードをフェッチし、キャッシュし、コンパイルしますが、実行はしません。
+引数は３つまで与えることができます。`rootName`が必須で、`sources`は任意、`options` は任意です。
+`rootName` はプログラムの生成に使われるルートモジュールです。これはコマンドラインの `deno run --reload example.ts` で渡すモジュール名と同様です。
+`sources` はハッシュで、キーはモジュールの完全修飾名、値はモジュールのテキストソースになります。
+`sources` が渡されると、Deno はすべてのモジュールをそのハッシュから解決し、Deno の外部にモジュール解決を試みなくなります。
+`sources` が与えられない場合、Deno はルートモジュールがコマンドラインで渡されるときと同じ方法でモジュール解決を行います。
+また、Deno はこれらのリソースをキャッシュします。
+解決されたリソースはすべて動的インポートとして扱われ、それらがローカルやリモートにある場合には読み取りやネットのパーミッションを要求します。
+`options` 引数は `Deno.CompilerOptions` 型のオプションで、Deno がサポートしている機能を含む TypeScript コンパイラオプションのサブセットです。
 
 <!-- L27..29
 The method resolves with a tuple. The first argument contains any diagnostics
@@ -66,15 +64,14 @@ The method resolves with a tuple. The first argument contains any diagnostics
 the keys are the output filenames and the values are the content.
 -->
 
-The method resolves with a tuple. The first argument contains any diagnostics
-(syntax or type errors) related to the code. The second argument is a map where
-the keys are the output filenames and the values are the content.
+メソッドはタプルを返します。一番目の値はコードに関する診断（構文エラーや型エラー）を含みます。
+二番目の値は出力するファイル名をキーとしファイルの中身を値とするマップです。
 
 <!-- L31..31
 An example of providing sources:
 -->
 
-An example of providing sources:
+以下はソースを与える例です。
 
 <!-- L33..41
 ```ts
@@ -103,16 +100,15 @@ We would expect map to contain 4 "files", named `/foo.js.map`, `/foo.js`,
 `/bar.js.map`, and `/bar.js`.
 -->
 
-We would expect map to contain 4 "files", named `/foo.js.map`, `/foo.js`,
-`/bar.js.map`, and `/bar.js`.
+マップに４つの「ファイル」が含まれることが期待されます。ファイル名は `/foo.js.map`、`/foo.js`、`/bar.js.map`、`/bar.js` です。
 
 <!-- L46..47
 When not supplying resources, you can use local or remote modules, just like you
 could do on the command line. So you could do something like this:
 -->
 
-When not supplying resources, you can use local or remote modules, just like you
-could do on the command line. So you could do something like this:
+リソースを与えない場合、ローカルまたはリモートのモジュールを使うことができます。
+コマンドラインで使うのと同じです。たとえば以下のようにできます。
 
 <!-- L49..53
 ```ts
@@ -132,7 +128,7 @@ const [diagnostics, emitMap] = await Deno.compile(
 In this case `emitMap` will contain a `console.log()` statement.
 -->
 
-In this case `emitMap` will contain a `console.log()` statement.
+この例では `emitMap` は `console.log()` 文を含むはずです。
 
 <!-- L57..57
 ### `Deno.bundle()`
