@@ -1,3 +1,7 @@
+---
+title: Import maps
+sort: 3
+---
 <!-- L1..1
 ## Import maps
 -->
@@ -9,26 +13,26 @@
 > [unstable features](../runtime/stability.md).
 -->
 
-> This is an unstable feature. Learn more about
+> この API は unstable です。詳細は以下。
 > [unstable features](../runtime/stability.md).
 
 <!-- L6..6
 Deno supports [import maps](https://github.com/WICG/import-maps).
 -->
 
-Deno supports [import maps](https://github.com/WICG/import-maps).
+Deno は [import maps](https://github.com/WICG/import-maps) をサポートしています。
 
 <!-- L8..8
 You can use import maps with the `--importmap=<FILE>` CLI flag.
 -->
 
-You can use import maps with the `--importmap=<FILE>` CLI flag.
+import maps を使うには CLI で `--importmap=<FILE>` フラグを与えます。
 
 <!-- L10..10
 Current limitations:
 -->
 
-Current limitations:
+現時点の制限は以下の通りです。
 
 <!-- L12..15
 - single import map
@@ -37,16 +41,16 @@ Current limitations:
 - supports only `file:`, `http:` and `https:` schemes
 -->
 
-- single import map
-- no fallback URLs
-- Deno does not support `std:` namespace
-- supports only `file:`, `http:` and `https:` schemes
+- 単一の import map
+- フォールバック URLs なし
+- Deno は `std:` 名前空間をサポートしない
+- `file:`、`http:`、`https:` スキーマのみをサポート
 
 <!-- L17..17
 Example:
 -->
 
-Example:
+例：
 
 <!-- L19..19
 **import_map.json**
@@ -96,7 +100,7 @@ console.log(red("hello world"));
 Then:
 -->
 
-Then:
+次。
 
 <!-- L39..41
 ```shell
@@ -112,7 +116,7 @@ $ deno run --importmap=import_map.json --unstable color.ts
 To use starting directory for absolute imports:
 -->
 
-To use starting directory for absolute imports:
+絶対パスによるインポートの開始ディレクトリを指定するには以下のようにします。
 
 <!-- L45..53
 ```json
@@ -154,7 +158,7 @@ import { MyUtil } from "/util.ts";
 You may map a different directory: (eg. src)
 -->
 
-You may map a different directory: (eg. src)
+別のディレクトリをマップすることもできます（例：src）。
 
 <!-- L63..71
 ```json
