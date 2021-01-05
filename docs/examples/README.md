@@ -30,7 +30,7 @@ more about the runtime.
 -->
 
 - [Hello World](./hello_world)
-- [Import and Export Modules](./import_export)
+- [モジュールのインポートとエクスポート](./import_export)
 - [How to Manage Dependencies](./manage_dependencies)
 - [Fetch Data](./fetch_data)
 - [Read and Write Files](./read_write_files)

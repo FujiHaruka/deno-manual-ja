@@ -12,7 +12,7 @@ sort: 1
 ## Concepts
 -->
 
-## コンセプト
+## この節で学ぶこと
 
 <!-- L5..6
 - Deno can run JavaScript or TypeScript out of the box with no additional tools
