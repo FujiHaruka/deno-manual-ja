@@ -1,22 +1,25 @@
+---
+title: 例
+sort: 60
+---
 <!-- L1..1
 # Examples
 -->
 
-# Examples
+# 例
 
 <!-- L3..4
 In this chapter you can find some example programs that you can use to learn
 more about the runtime.
 -->
 
-In this chapter you can find some example programs that you can use to learn
-more about the runtime.
+この章では Deno ランタイムについてさらに学べる教材としてサンプルプログラムを用意しました。
 
 <!-- L6..6
 ## Basic
 -->
 
-## Basic
+## 基本
 
 <!-- L8..12
 - [Hello World](./examples/hello_world)
@@ -36,7 +39,7 @@ more about the runtime.
 ## Advanced
 -->
 
-## Advanced
+## 応用
 
 <!-- L16..23
 - [Unix Cat](./examples/unix_cat)
